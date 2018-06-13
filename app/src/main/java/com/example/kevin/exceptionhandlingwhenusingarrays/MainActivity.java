@@ -19,6 +19,22 @@ public class MainActivity extends AppCompatActivity {
         String oldTxtNumberOfStarsValue;
 
         int[] peopleRates = {1, 4, 3, 5, 2, 5, 1, 3, 4, 5, 2, 4, 5};
+        int[] occurance = new int[6];
+
+        for (int respond = 0; respond < peopleRates.length; respond++) {
+
+            ++occurance[respond];
+
+        }
+
+        for (int amount = 1; amount < occurance.length; amount++) {
+
+            oldTxtRatesValue = txtRates.getText().toString();
+            oldTxtNumberOfStarsValue = txtNumberOfStarts.getText().toString();
+
+            txtRates.setText(oldTxtRatesValue + amount + "\n");
+            txtNumberOfStarts.setText(oldTxtNumberOfStarsValue + occurance[amount] + "\n");
+        }
 
 
 
