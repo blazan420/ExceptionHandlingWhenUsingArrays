@@ -2,6 +2,7 @@ package com.example.kevin.exceptionhandlingwhenusingarrays;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -23,8 +24,17 @@ public class MainActivity extends AppCompatActivity {
 
         for (int respond = 0; respond < peopleRates.length; respond++) {
 
-            ++occurance[peopleRates[respond]];
+            //++occurance[peopleRates[respond]];
                             // 1
+
+            try {
+                ++occurance[peopleRates[respond]];
+
+            } catch (Exception e) {
+
+                Log.i("LOG", e.toString());
+
+            }
 
         }
 
