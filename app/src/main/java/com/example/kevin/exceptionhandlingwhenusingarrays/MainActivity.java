@@ -18,12 +18,13 @@ public class MainActivity extends AppCompatActivity {
         String oldTxtRatesValue;
         String oldTxtNumberOfStarsValue;
 
-        int[] peopleRates = {1, 4, 3, 5, 2, 5, 1, 3, 4, 5, 2, 4, 5};
+        int[] peopleRates = {1, 4, 3, 5, 2, 5, 1, 3, 4, 5, 2, 4, 5, 6};
         int[] occurance = new int[6];
 
         for (int respond = 0; respond < peopleRates.length; respond++) {
 
-            ++occurance[respond];
+            ++occurance[peopleRates[respond]];
+                            // 1
 
         }
 
